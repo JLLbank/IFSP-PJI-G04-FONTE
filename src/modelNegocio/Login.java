@@ -6,6 +6,7 @@ import modelDAO.DataBase;
 public class Login {
 	Screen tela = new Screen();
 	DataBase dados = new DataBase();
+	Menu menu = new Menu();
 	
 	public void login() {
 		switch(tela.escolha()) {
@@ -35,6 +36,7 @@ public class Login {
 			if(aux.equals(dados.getConta(i))) {
 				aux2 = true;
 				tela.bemVindoFulano(i);
+				menu.menuPrincipal(i);
 			}
 		}
 		if(aux2==false) {
